@@ -1,12 +1,56 @@
-h1 {
-    background-color: blue
-    color(#ffffff red green blue) ;
-}   
+body {
+display: grid;
+grid-template-columns: 150px 1fr 1fr 250px;
+grid-template-rows: auto;
+grid-template-areas:
+"hoofding hoofding hoofding hoofding"
+"navigatie inhoud inhoud reclame"
+"voetnoot voetnoot voetnoot voetnoot";
+}
+header {
+grid-area: hoofding;
+background-color: green;
+}
+footer {
+grid-area: voetnoot;
+background-color: green;
+}
+nav {
+grid-area: navigatie;
+background-color: yellow;
+}
+main {
+grid-area: inhoud;
+background-color: red;
+}
+aside {
+grid-area: reclame;
+background-color: blue;
+}
+/* h1 {
+    background-color: blue;
+    color: #ffffff;
+}
+
 .logo {
     border-width: 20px;
     border-style: double;
     border-color: green;
 }
+
 #inhoud {
     font-family: 'Courier New', Courier, monospace;
 }
+
+.ouder {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: blue;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.kind {
+    background-color: #ffffff;
+    border: 5px dotted red;
+} */

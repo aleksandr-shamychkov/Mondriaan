@@ -1,0 +1,41 @@
+body {
+  background: black;
+  display: grid;
+  grid-template-columns: 30px 50px 120px 50px 100px 40px 40px;
+  grid-template-rows: 120px 120px 60px 60px;
+  gap: 15px;
+  color: black;
+  grid-template-areas:
+    "whittearea1 geelearea1 bluearea1 roodarea1 roodarea1 geelearea2 whitearea2"
+    "whittearea3 whittearea4 whittearea5 whittearea6 bluearea2 roodarea2 whittearea7"
+    "whittearea8 whittearea9 roodarea3 roodarea3 whittearea10 geelearea3 whittearea7"
+    "whittearea8 bluearea3 geelearea4 geelearea4 whittearea11 whittearea11 whittearea12";
+}
+
+.cell { display: block; width: 100%; height: 100%; }
+
+.whitecell1  { grid-area: whittearea1;  background: white; }
+.whitecell2  { grid-area: whittearea2;  background: white; }
+.whitecell3  { grid-area: whittearea3;  background: white; }
+.whitecell4  { grid-area: whittearea4;  background: white; }
+.whitecell5  { grid-area: whittearea5;  background: white; }
+.whitecell6  { grid-area: whittearea6;  background: white; }
+.whitecell7  { grid-area: whittearea7;  background: white; }
+.whitecell8  { grid-area: whittearea8;  background: white; }
+.whitecell9  { grid-area: whittearea9;  background: white; }
+.whitecell10 { grid-area: whittearea10; background: white; }
+.whitecell11 { grid-area: whittearea11; background: white; }
+.whitecell12 { grid-area: whittearea12; background: white; }
+
+.yellowcell1 { grid-area: geelearea1;  background: yellow; }
+.yellowcell2 { grid-area: geelearea2;  background: yellow; }
+.yellowcell3 { grid-area: geelearea3;  background: yellow; }
+.yellowcell4 { grid-area: geelearea4;  background: yellow; }
+
+.bluecell1   { grid-area: bluearea1;   background: blue; }
+.bluecell2   { grid-area: bluearea2;   background: blue; }
+.bluecell3   { grid-area: bluearea3;   background: blue; }
+
+.redcell1    { grid-area: roodarea1;   background: red; }
+.redcell2    { grid-area: roodarea2;   background: red; }
+.redcell3    { grid-area: roodarea3;   background: red; }

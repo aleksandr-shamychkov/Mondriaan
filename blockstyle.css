@@ -1,0 +1,16 @@
+.block-element {
+border: 1px solid #000;
+margin: 10px 0;
+padding: 20px;
+text-align: center;
+}
+div{
+background-color: green;
+}
+article{
+background-color: yellow;
+}
+section{
+background-color: red;
+}
+Je

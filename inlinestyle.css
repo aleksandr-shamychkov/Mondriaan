@@ -1,0 +1,9 @@
+.inline-element {
+background-color: #ffd700;
+border: 1px solid #000;
+padding: 3px;
+margin-right: 5px;
+}
+p{
+background-color: pink;
+}

@@ -1,0 +1,77 @@
+:root{
+    --gutter: 14px;       /* black line thickness */
+    --cols: 6;
+    --row-height: 9vw;
+    --bg-black: #000;
+    --white: #fff;
+    --red: #e22;
+    --blue: #1e4fe2;
+    --yellow: #f1c40f;
+    --max-width: 1200px;
+}
+
+/* Canvas: black background with thick gutters as grid gap */
+.canvas {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    background: var(--bg-black);
+    padding: var(--gutter);
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gutter);
+    align-items: stretch;
+}
+
+/* Generic block */
+.block {
+    background: var(--white);
+    min-height: 0; /* allow grid row sizing */
+    display: block;
+    box-shadow: none;
+    color: #222;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+/* Span helpers */
+.span-1 { grid-column: span 1; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+.span-5 { grid-column: span 5; }
+.span-6 { grid-column: span 6; }
+
+.row-span-1 { grid-row: span 1; }
+.row-span-2 { grid-row: span 2; }
+.row-span-3 { grid-row: span 3; }
+.row-span-4 { grid-row: span 4; }
+
+/* Color classes */
+.block-red    { background: var(--red); }
+.block-blue   { background: var(--blue); }
+.block-yellow { background: var(--yellow); }
+.block-white  { background: var(--white); }
+.block-black  { background: var(--bg-black); }
+
+/* Optional inner content centering */
+.block .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Make canvas responsive: fewer columns on narrow screens */
+@media (max-width: 900px){
+    :root { --cols: 4; --row-height: 12vw; }
+    .canvas { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 560px){
+    :root { --cols: 2; --row-height: 20vw; --gutter: 10px; }
+    .canvas { grid-template-columns: repeat(2, 1fr); gap: var(--gutter); padding: var(--gutter); }
+}

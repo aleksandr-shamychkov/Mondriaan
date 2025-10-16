@@ -7,3 +7,6 @@ h1 {
     border-style: double;
     border-color: green;
 }
+#inhoud {
+    font-family: 'Courier New', Courier, monospace;
+}
